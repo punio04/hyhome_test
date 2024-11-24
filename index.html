@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>後悔しない家づくりの相談窓具【みなの家づくり】</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <article class="llw">
+    <div class="llwInner">
+      <!-- fv -->
+      <div class="overlayArea">
+        <picture>
+          <img src="img/fv.png" alt="毎日約100人が“かしゆう”に相談中！LINEで簡単・無料相談！後悔しない家づくりの相談窓具">
+        </picture>
+        <div class="fv-btn-frame">
+          <a href="https://s.lmes.jp/landing-qr/2000323212-mqaeqxPl?uLand=6iiNf7" class="overlayItem cta01__btn--01">
+            <picture>
+              <source srcset="img/cta.png" type="image/webp">
+              <img src="img/cta.png" alt="LINEで相談する">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <!-- 1 -->
+      <picture>
+        <source srcset="img/1.png" type="image/webp">
+        <img src="img/1.png" alt="ところで”かしゆう”とみなって何者？？">
+      </picture>
+      <!-- 2 -->
+      <picture>
+        <source srcset="img/2.png" type="image/webp">
+        <img src="img/2.png" alt="そんなあなたにかしゆう✕みなでサポートします！">
+      </picture>
+      <!-- 3 -->
+      <picture>
+        <source srcset="img/3.png" type="image/webp">
+        <img src="img/3.png" alt="無料相談からの流れはこんな感じ！">
+      </picture>
+      <!-- 4 -->
+      <div class="overlayArea">
+        <picture>
+          <img src="img/4.png" alt="さらに今なら...LINEで3っの特典がもらえる！">
+        </picture>
+        <div class="tokuten-btn-frame">
+          <a href="https://s.lmes.jp/landing-qr/2000323212-mqaeqxPl?uLand=6iiNf7" class="overlayItem cta01__btn--01">
+            <picture>
+              <source srcset="img/cta.png" type="image/webp">
+              <img src="img/cta.png" alt="LINEで相談する">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="overlayArea">
+        <picture>
+          <img src="img/5.png" alt="実際に理想のマイホームを実現した声">
+        </picture>
+        <div class="offer-frame">
+          <div class="slider" id="ns-slider1">
+            <div style="background-image:url(img/voice_01.png)"></div>
+            <div style="background-image:url(img/voice_02.png)"></div>
+            <div style="background-image:url(img/voice_03.png)"></div>
+            <i class="left" class="arrows" style="z-index:2; position:absolute;">
+            </i>
+            <i class="right" class="arrows" style="z-index:2; position:absolute;">
+            </i>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <picture>
+        <source srcset="img/6.png" type="image/webp">
+        <img src="img/6.png" alt="ちなみに…他社と比べてみると選ばれるワケは一目瞭然！">
+      </picture>
+      <!-- 7 -->
+      <div class="overlayArea">
+        <picture>
+          <img src="img/7.png" alt="かしゆうの安心ポイント！">
+        </picture>
+        <div class="point-btn-frame">
+          <a href="https://s.lmes.jp/landing-qr/2000323212-mqaeqxPl?uLand=6iiNf7" class="overlayItem cta01__btn--01">
+            <picture>
+              <source srcset="img/cta.png" type="image/webp">
+              <img src="img/cta.png" alt="LINEで相談する">
+            </picture>
+          </a>
+        </div>
+      </div>
+      <!-- 8 -->
+      <picture>
+        <source srcset="img/8.png" type="image/webp">
+        <img src="img/8.png" alt="私がこのサービスを始めた理由とは？">
+      </picture>
+    </div>
+  </article>
+
+  <footer class="llw">
+    <div class="foot_bottom_llw">
+      <p>© みなの家づくり.</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    (function ($) {
+      "use strict";
+      $.fn.sliderResponsive = function (settings) {
+        var set = $.extend(
+          {
+            slidePause: 5000,
+            fadeSpeed: 800,
+            autoPlay: "on",
+            showArrows: "off",
+            hideDots: "off",
+            hoverZoom: "on",
+            titleBarTop: "off"
+          },
+          settings
+        );
+
+        var $slider = $(this);
+        var size = $slider.find("> div").length; //number of slides
+        var position = 0; // current position of carousal
+        var sliderIntervalID; // used to clear autoplay
+
+
+
+        // Put .show on the first Slide
+        $slider.find("div:first-of-type").addClass("show");
+
+        // Put .showLi on the first dot
+        $slider.find("li:first-of-type").addClass("showli");
+
+        //fadeout all items except .show
+        $slider.find("> div").not(".show").fadeOut();
+
+        // If Autoplay is set to 'on' than start it
+        if (set.autoPlay === "on") {
+          startSlider();
+        }
+
+        // If showarrows is set to 'on' then don't hide them
+        if (set.showArrows === "on") {
+          $slider.addClass("showArrows");
+        }
+
+        // If hideDots is set to 'on' then hide them
+        if (set.hideDots === "on") {
+          $slider.addClass("hideDots");
+        }
+
+        // If hoverZoom is set to 'off' then stop it
+        if (set.hoverZoom === "off") {
+          $slider.addClass("hoverZoomOff");
+        }
+
+        // If titleBarTop is set to 'on' then move it up
+        if (set.titleBarTop === "on") {
+          $slider.addClass("titleBarTop");
+        }
+
+        // function to start auto play
+        function startSlider() {
+          sliderIntervalID = setInterval(function () {
+            nextSlide();
+          }, set.slidePause);
+        }
+
+        // on mouseover stop the autoplay
+        $slider.mouseover(function () {
+          if (set.autoPlay === "on") {
+            clearInterval(sliderIntervalID);
+          }
+        });
+
+        // on mouseout starts the autoplay
+        $slider.mouseout(function () {
+          if (set.autoPlay === "on") {
+            startSlider();
+          }
+        });
+
+        //on right arrow click
+        $slider.find("> .right").click(nextSlide);
+
+        //on left arrow click
+        $slider.find("> .left").click(prevSlide);
+
+        // Go to next slide
+        function nextSlide() {
+          position = $slider.find(".show").index() + 1;
+          if (position > size - 1) position = 0;
+          changeCarousel(position);
+        }
+
+        // Go to previous slide
+        function prevSlide() {
+          position = $slider.find(".show").index() - 1;
+          if (position < 0) position = size - 1;
+          changeCarousel(position);
+        }
+
+        //when user clicks slider button
+        $slider.find(" > ul > li").click(function () {
+          position = $(this).index();
+          changeCarousel($(this).index());
+        });
+
+        //this changes the image and button selection
+        function changeCarousel() {
+          $slider.find(".show").removeClass("show").fadeOut();
+          $slider.find("> div").eq(position).fadeIn(set.fadeSpeed).addClass("show");
+          // The Dots
+          $slider.find("> ul").find(".showli").removeClass("showli");
+          $slider.find("> ul > li").eq(position).addClass("showli");
+        }
+
+        return $slider;
+      };
+    })(jQuery);
+
+    //////////////////////////////////////////////
+    // Activate each slider - change options
+    //////////////////////////////////////////////
+    $(document).ready(function () {
+      $("#ns-slider1").sliderResponsive({
+        fadeSpeed: 300,
+        autoPlay: "off",
+        showArrows: "on",
+        hideDots: "off"
+      });
+    });
+  </script>
+</body>
+
+
+</html>
